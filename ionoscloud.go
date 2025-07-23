@@ -47,7 +47,7 @@ const (
 	flagCloudInit              = "ionoscloud-cloud-init"
 	flagSSHInCloudInit         = "ionoscloud-ssh-in-cloud-init"
 	flagSSHUser                = "ionoscloud-ssh-user"
-	flagCloudInitB64           = "ionoscloud-cloud-init-b64"
+	flagCloudInitB64           = "ionoscloud-cloud-config-b64"
 	flagWaitForIpChange        = "ionoscloud-wait-for-ip-change"
 	flagWaitForIpChangeTimeout = "ionoscloud-wait-for-ip-change-timeout"
 	flagNatId                  = "ionoscloud-nat-id"

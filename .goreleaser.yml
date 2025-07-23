@@ -9,7 +9,7 @@ builds:
     env:
       - CGO_ENABLED=0
       - GO111MODULE=on
-    mod_timestamp: '{{ .CommitTimestamp }}'
+    mod_timestamp: "{{ .CommitTimestamp }}"
     flags:
       - -trimpath
       - -mod=vendor
@@ -21,25 +21,25 @@ builds:
       - darwin
     goarch:
       - amd64
-      - '386'
+      - "386"
       - arm64
     ignore:
       - goos: darwin
-        goarch: '386'
-    binary: 'docker-machine-driver-ionoscloud'
+        goarch: "386"
+    binary: "docker-machine-driver-ionoscloud"
 archives:
-  - name_template: '{{ .ProjectName }}-{{ .Version }}-{{ .Os }}-{{ .Arch }}'
+  - name_template: "{{ .ProjectName }}-{{ .Version }}-{{ .Os }}-{{ .Arch }}"
     format_overrides:
       - goos: windows
         format: zip
     files: [include-only-the-binary*]
     wrap_in_directory: false
 checksum:
-  name_template: '{{ .ProjectName }}-{{ .Version }}-SHA256SUMS'
+  name_template: "{{ .ProjectName }}-{{ .Version }}-SHA256SUMS"
   algorithm: sha256
 release:
   github:
-    owner: ionos-cloud
+    owner: devopsbarbarian
     name: docker-machine-driver
 # If you want to manually examine the release before its live, uncomment this line:
 # draft: true
